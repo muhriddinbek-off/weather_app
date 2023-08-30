@@ -12,6 +12,7 @@ class ForcastPage extends StatelessWidget {
     return CustomScrollView(
       slivers: [
         const SliverAppBar(
+          elevation: 0,
           backgroundColor: Color.fromARGB(255, 32, 41, 85),
           centerTitle: true,
           pinned: true,
