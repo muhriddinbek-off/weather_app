@@ -12,7 +12,7 @@ class SearchWidget extends StatelessWidget {
           alignment: Alignment.centerLeft,
           padding: const EdgeInsets.only(left: 20),
           height: 60,
-          width: MediaQuery.of(context).size.height * 0.30,
+          width: MediaQuery.of(context).size.width * 0.63,
           decoration: BoxDecoration(
             color: const Color.fromARGB(255, 184, 230, 231),
             borderRadius: BorderRadius.circular(20),
@@ -37,7 +37,7 @@ class SearchWidget extends StatelessWidget {
         SizedBox(width: MediaQuery.of(context).size.height * 0.02),
         Container(
           height: 60,
-          width: 50,
+          width: MediaQuery.of(context).size.height * 0.09,
           decoration: BoxDecoration(
             color: const Color.fromARGB(255, 184, 230, 231),
             borderRadius: BorderRadius.circular(20),

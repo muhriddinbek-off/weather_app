@@ -39,9 +39,9 @@ class LocationPage extends StatelessWidget {
               const SizedBox(height: 40),
               const TempWind(),
               const TextTitle(text1: 'Today', text2: 'View report', top: 40, bottom: 30),
-              const SizedBox(
-                height: 100,
-                child: HourTime(),
+              SizedBox(
+                height: MediaQuery.of(context).size.height * 0.09,
+                child: const HourTime(),
               ),
             ],
           ),

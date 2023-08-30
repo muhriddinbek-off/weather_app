@@ -25,9 +25,9 @@ class ForcastPage extends StatelessWidget {
           child: Column(
             children: [
               const TextTitle(text1: 'Today', text2: '29-08-2023', top: 20, bottom: 15),
-              const SizedBox(
-                height: 100,
-                child: HourTime(),
+              SizedBox(
+                height: MediaQuery.of(context).size.height * 0.09,
+                child: const HourTime(),
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.start,
