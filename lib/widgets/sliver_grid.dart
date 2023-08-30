@@ -26,16 +26,16 @@ class SliverGridWidget extends StatelessWidget {
             ),
             child: Column(
               children: [
-                SizedBox(height: 20),
-                Text('32 c', style: TextStyle(fontSize: 20, color: Colors.black87, fontWeight: FontWeight.w700)),
-                SizedBox(height: 15),
+                const SizedBox(height: 20),
+                const Text('32 c', style: TextStyle(fontSize: 20, color: Colors.black87, fontWeight: FontWeight.w700)),
+                const SizedBox(height: 15),
                 Image.network('https://cdn-icons-png.flaticon.com/128/1163/1163657.png', height: 80, width: 80),
-                SizedBox(height: 15),
+                const SizedBox(height: 15),
                 Text(
                   'Cloudy',
                   style: TextStyle(fontSize: 20, fontWeight: FontWeight.w400, color: Colors.green.shade500),
                 ),
-                Text(
+                const Text(
                   'Toshkent',
                   style: TextStyle(fontSize: 22, fontWeight: FontWeight.w900, color: Colors.black),
                 ),

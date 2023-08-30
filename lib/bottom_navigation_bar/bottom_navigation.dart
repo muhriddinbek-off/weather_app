@@ -22,7 +22,7 @@ class _BottomNavigatorPageState extends State<BottomNavigatorPage> {
       const SettingsPage(),
     ];
     return Scaffold(
-      backgroundColor: current % 2 == 0 ? Colors.blue : const Color.fromARGB(255, 146, 156, 212),
+      backgroundColor: current % 2 == 0 ? const Color.fromARGB(255, 32, 41, 85) : const Color.fromARGB(255, 146, 156, 212),
       body: pages[current],
       bottomNavigationBar: SizedBox(
         height: 70,
@@ -30,7 +30,7 @@ class _BottomNavigatorPageState extends State<BottomNavigatorPage> {
           borderRadius: const BorderRadius.vertical(top: Radius.circular(20)),
           child: BottomNavigationBar(
             fixedColor: Colors.white,
-            backgroundColor: current % 2 == 0 ? const Color.fromARGB(255, 37, 51, 129) : const Color.fromARGB(255, 176, 184, 228),
+            backgroundColor: current % 2 == 0 ? Color.fromARGB(255, 55, 59, 80) : const Color.fromARGB(255, 176, 184, 228),
             type: BottomNavigationBarType.fixed,
             unselectedItemColor: current % 2 == 0 ? Colors.blue : Colors.black,
             onTap: (value) {
