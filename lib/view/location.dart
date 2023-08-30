@@ -38,7 +38,7 @@ class LocationPage extends StatelessWidget {
               const Text('26 c', style: TextStyle(fontSize: 43, fontWeight: FontWeight.w900, color: Colors.white)),
               const SizedBox(height: 40),
               const TempWind(),
-              const TextTitle(text1: 'Today', text2: 'View report'),
+              const TextTitle(text1: 'Today', text2: 'View report', top: 40, bottom: 30),
               const SizedBox(
                 height: 100,
                 child: HourTime(),

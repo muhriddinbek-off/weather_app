@@ -3,16 +3,20 @@ import 'package:flutter/material.dart';
 class TextTitle extends StatelessWidget {
   final String text1;
   final String text2;
+  final double top;
+  final double bottom;
   const TextTitle({
     super.key,
     required this.text1,
     required this.text2,
+    required this.top,
+    required this.bottom,
   });
 
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(left: 25, top: 40, right: 25, bottom: 30),
+      padding: EdgeInsets.only(left: 25, top: top, right: 25, bottom: bottom),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
