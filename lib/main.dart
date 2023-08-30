@@ -1,7 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:weather_app/bottom_navigation_bar/bottom_navigation.dart';
+import 'package:flutter/services.dart';
 
 void main() {
+  SystemChrome.setSystemUIOverlayStyle(
+    const SystemUiOverlayStyle(
+      statusBarColor: Colors.transparent,
+      statusBarIconBrightness: Brightness.light,
+      statusBarBrightness: Brightness.light,
+    ),
+  );
   runApp(const MyApp());
 }
 
