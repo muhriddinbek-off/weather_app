@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:weather_app/api/weather_api.dart';
 import 'package:weather_app/bottom_navigation_bar/bottom_navigation.dart';
 import 'package:flutter/services.dart';
+import 'package:provider/provider.dart';
+import 'package:weather_app/provider/region_name.dart';
+import 'package:weather_app/provider/weather_modal.dart';
 
 void main() {
   SystemChrome.setSystemUIOverlayStyle(
@@ -18,12 +22,18 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      initialRoute: 'screens',
-      routes: {
-        'screens': (context) => const BottomNavigatorPage(),
-      },
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (context) => ProviderWeatherModal()),
+        ChangeNotifierProvider(create: (context) => RegionName()),
+      ],
+      child: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        initialRoute: 'screens',
+        routes: {
+          'screens': (context) => const BottomNavigatorPage(),
+        },
+      ),
     );
   }
 }
