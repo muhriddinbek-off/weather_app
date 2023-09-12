@@ -1,21 +1,21 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:weather_app/api/weather_api.dart';
 import 'package:weather_app/modals/weather_class.dart';
 
 class ProviderWeatherModal extends ChangeNotifier {
   ProviderWeatherModal() {
-    getAllWeather(region);
+    getAllWeather();
   }
-
   List<WeatherModal> weather = [];
   bool isLoading = false;
-  String region = 'Samarqand';
-
-  void getAllWeather(String newRegion) async {
+  String regions = 'Samarqand';
+  Future<void> getAllWeather() async {
     changeLoadingState();
-    region = newRegion;
-    final data = await WeatherApi().getWeatherInformation(region);
+    final data = await WeatherApi().getWeatherInformation(regions);
     weather.add(data);
+    print(weather[0].location.region);
     changeLoadingState();
   }
 

@@ -26,6 +26,7 @@ class MyApp extends StatelessWidget {
       providers: [
         ChangeNotifierProvider(create: (context) => ProviderWeatherModal()),
         ChangeNotifierProvider(create: (context) => RegionName()),
+        ChangeNotifierProvider(create: (context) => WeatherApi()),
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,

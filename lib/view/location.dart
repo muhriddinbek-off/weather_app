@@ -15,6 +15,7 @@ class LocationPage extends StatefulWidget {
 
 class _LocationPageState extends State<LocationPage> {
   @override
+  @override
   Widget build(BuildContext context) {
     List weatherType = [
       {'type': 'Rain', 'iconimg': 'https://img.icons8.com/?size=1x&id=15360&format=png'},
@@ -23,7 +24,6 @@ class _LocationPageState extends State<LocationPage> {
       {'type': 'Light-rain', 'iconimg': 'https://cdn-icons-png.flaticon.com/128/1959/1959342.png'},
       {'type': 'Snow', 'iconimg': 'https://cdn-icons-png.flaticon.com/128/2315/2315309.png'},
     ];
-    // var myProvider = context.read<ProviderWeatherModal>();
 
     return CustomScrollView(
       slivers: [
