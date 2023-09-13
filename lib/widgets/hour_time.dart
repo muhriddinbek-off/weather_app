@@ -10,9 +10,8 @@ class HourTime extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // final data = context.read<ProviderWeatherModal>();
     return Consumer<ProviderWeatherModal>(builder: (context, value, child) {
-      if (value.isLoading) {
+      if (value.weather.isEmpty) {
         return const Center(
           child: CircularProgressIndicator(),
         );

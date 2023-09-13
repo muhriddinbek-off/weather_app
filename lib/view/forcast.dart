@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:weather_app/api/weather_api.dart';
 import 'package:weather_app/provider/weather_modal.dart';
 import 'package:weather_app/widgets/hour_time.dart';
 import 'package:weather_app/widgets/text_title.dart';
@@ -14,10 +15,11 @@ class ForcastPage extends StatefulWidget {
 }
 
 class _ForcastPageState extends State<ForcastPage> {
+  WeatherApi weatherApi = WeatherApi();
   @override
   Widget build(BuildContext context) {
     return Consumer<ProviderWeatherModal>(builder: (context, value, child) {
-      if (value.isLoading) {
+      if (value.weather.isEmpty) {
         return const Center(
           child: CircularProgressIndicator(),
         );
