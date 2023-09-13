@@ -46,7 +46,7 @@ class _LocationPageState extends State<LocationPage> {
                     Text('${value.weather[0].location.region} viloyati', style: const TextStyle(fontSize: 26, fontWeight: FontWeight.w700, color: Colors.white)),
                     Text('${value.weather[0].current.lastUpdated} ', style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w400, color: Colors.white54, height: 1.7)),
                     const SizedBox(height: 50),
-                    Image.network(value.weather[0].current.condition.icon, height: 100, width: 100),
+                    Image.network('https:${value.weather[0].current.condition.icon}', height: 100, width: 100),
                     Text('${value.weather[0].current.condition.text} ', style: const TextStyle(fontSize: 25, fontWeight: FontWeight.w900, color: Colors.white)),
                     const SizedBox(height: 35),
                     Text('${value.weather[0].current.tempC} c', style: const TextStyle(fontSize: 43, fontWeight: FontWeight.w900, color: Colors.white)),

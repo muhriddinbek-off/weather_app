@@ -17,10 +17,12 @@ class Forecast {
 
 class ForecastDay {
   String date;
+  DayForecastDay day;
   List<Hour> hour;
   ForecastDay({
     required this.date,
     required this.hour,
+    required this.day,
   });
   factory ForecastDay.fromJson(Map<String, dynamic> json) {
     List<Hour> hours = [];
@@ -32,6 +34,7 @@ class ForecastDay {
     return ForecastDay(
       date: json['date'],
       hour: List.from(hours),
+      day: DayForecastDay.fromJson(json['day']),
     );
   }
 }
@@ -61,6 +64,33 @@ class Condition {
   });
   factory Condition.fromJson(Map<String, dynamic> json) {
     return Condition(
+      icon: json['icon'],
+    );
+  }
+}
+
+class DayForecastDay {
+  double maxtempC;
+  ConditionDay condition;
+  DayForecastDay({
+    required this.maxtempC,
+    required this.condition,
+  });
+  factory DayForecastDay.fromJson(Map<String, dynamic> json) {
+    return DayForecastDay(
+      maxtempC: json['maxtemp_c'],
+      condition: ConditionDay.fromJson(json['condition']),
+    );
+  }
+}
+
+class ConditionDay {
+  String icon;
+  ConditionDay({
+    required this.icon,
+  });
+  factory ConditionDay.fromJson(Map<String, dynamic> json) {
+    return ConditionDay(
       icon: json['icon'],
     );
   }

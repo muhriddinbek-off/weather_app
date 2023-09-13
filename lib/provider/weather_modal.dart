@@ -16,6 +16,7 @@ class ProviderWeatherModal extends ChangeNotifier {
     final data = await WeatherApi().getWeatherInformation(regions);
     weather.add(data);
     print(weather[0].location.region);
+    print(weather[0].forecast.forecatday[0].date);
     changeLoadingState();
   }
 
